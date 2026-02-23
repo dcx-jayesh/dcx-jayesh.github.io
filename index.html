@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DCX JAYESH | Official Free Fire Gaming Website</title>
+
+<meta name="description" content="DCX JAYESH Official Free Fire Gaming Website. Watch gameplay videos, guild info, UID, diamond spins, and join DCX Army.">
+<meta name="keywords" content="DCX Jayesh, Free Fire India, Free Fire UID, Free Fire Guild, DCX Army, Gaming Website, Free Fire Player India">
+<meta name="author" content="DCX JAYESH">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="DCX JAYESH | Official Free Fire Gaming Website">
+<meta property="og:description" content="Official website of DCX JAYESH. Free Fire gameplay, guild info, UID and gaming highlights.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dcx-jayesh.github.io"> 
+<meta property="og:image" content="profile.jpeg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DCX JAYESH Gaming Website">
+<meta name="twitter:description" content="Free Fire gameplay, guild info, UID, spins and highlights.">
+<meta name="twitter:image" content="profile.jpeg">
+
+<link rel="canonical" href="https://dcx-jayesh.github.io"> 
+<link rel="icon" href="profile.jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
+body{background:#070707;color:white;overflow-x:hidden;}
+nav{position:fixed;width:100%;top:0;background:#000;padding:15px;text-align:center;border-bottom:1px solid #ff0000;z-index:1000;}
+nav a{color:white;margin:0 20px;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#ff0000;text-shadow:0 0 10px #ff0000;}
+header{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;background:linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.9)),url("profile.jpeg") center/cover no-repeat;}
+header::after{content:"";position:absolute;width:100%;height:100%;background:radial-gradient(circle at center, rgba(255,0,0,0.18), transparent 65%);z-index:0;}
+.hero-content{position:relative;z-index:2;background:rgba(0,0,0,0.55);padding:45px;border-radius:22px;box-shadow:0 0 40px #ff0000,0 0 80px rgba(255,0,0,0.35);backdrop-filter:blur(6px);max-width:600px;}
+.hero-content h1{font-size:4rem;color:#ff0000;text-shadow:0 0 10px #ff0000,0 0 25px #ff0000,0 0 50px rgba(255,0,0,0.7);letter-spacing:3px;}
+.uid-box{margin-top:15px;background:rgba(255,0,0,0.25);padding:12px 25px;border-radius:30px;display:inline-block;box-shadow:0 0 20px #ff0000;cursor:pointer;}
+
+.subscribe-btn,.join-btn{
+display:inline-block;margin-top:25px;padding:14px 35px;font-size:18px;color:white;border:2px solid #ff0000;border-radius:40px;text-decoration:none;letter-spacing:1px;transition:0.35s;
+box-shadow:0 0 15px #ff0000,0 0 35px rgba(255,0,0,0.5);
+}
+.subscribe-btn{box-shadow:0 0 20px #ff0000,0 0 45px #ff0000,0 0 70px rgba(255,0,0,0.7);}
+.join-btn{box-shadow:0 0 20px #ff0000,0 0 40px #ff0000,0 0 65px rgba(255,0,0,0.8);}
+.subscribe-btn:hover,.join-btn:hover{background:white;color:black;box-shadow:0 0 25px white,0 0 45px #ff0000,0 0 75px #ff0000;transform:scale(1.05);}
+
+section{padding:110px 20px;text-align:center;}
+h2{font-size:2.6rem;margin-bottom:35px;color:#ff0000;text-shadow:0 0 15px #ff0000;}
+.guild-banner{max-width:1000px;margin:auto;border-radius:20px;overflow:hidden;box-shadow:0 0 60px #ff0000;}
+.guild-banner img{width:100%;display:block;}
+.guild-info{max-width:1000px;margin:30px auto 0;background:#111;padding:30px;border-radius:20px;text-align:left;box-shadow:0 0 30px #ff000044;font-size:18px;line-height:1.7;}
+.leader{color:#ff0000;font-weight:bold;font-size:22px;text-shadow:0 0 10px #ff0000,0 0 25px #ff0000,0 0 50px rgba(255,0,0,0.8);}
+.co-leader{color:#ff9900;font-weight:bold;font-size:21px;text-shadow:0 0 10px #ff9900,0 0 25px #ff7700,0 0 45px rgba(255,120,0,0.7);}
+.officer{color:#ff4444;font-weight:bold;font-size:20px;text-shadow:0 0 10px #ff4444,0 0 25px #ff0000,0 0 40px rgba(255,0,0,0.6);}
+
+.videos{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;}
+.video-card{background:#111;padding:12px;border-radius:15px;transition:0.3s;box-shadow:0 0 15px #ff000033;}
+.video-card:hover{transform:scale(1.05);}
+.thumbnail{position:relative;overflow:hidden;border-radius:10px;}
+.thumbnail img{width:100%;}
+.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;color:#ff0000;}
+
+.contact-box{background:#111;padding:25px;border-radius:15px;display:inline-block;box-shadow:0 0 20px #ff000033;}
+footer{background:#000;padding:20px;text-align:center;border-top:1px solid #ff0000;}
+
+#loader{position:fixed;width:100%;height:100vh;background:#000;display:flex;justify-content:center;align-items:center;z-index:9999;flex-direction:column;color:#ff0000;font-size:22px;}
+.loader-circle{width:70px;height:70px;border:4px solid #330000;border-top:4px solid #ff0000;border-radius:50%;animation:spin 1s linear infinite;box-shadow:0 0 30px #ff0000;margin-bottom:15px;}
+@keyframes spin{100%{transform:rotate(360deg);}}
+
+.copy-uid{cursor:pointer;color:#ffcc00;text-shadow:0 0 10px #ffcc00;}
+.copy-icon{margin-left:8px;font-size:18px;}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#ff0000;padding:12px 20px;border-radius:30px;display:none;box-shadow:0 0 20px #ff0000;}
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+<div class="loader-circle"></div>
+Loading DCX JAYESH...
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#guild">Guild</a>
+<a href="#videos">Videos</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+<div class="hero-content">
+<h1>DCX JAYESH</h1>
+<p>Free Fire Gaming • Event Spins • Legendary Unlocks</p>
+
+<div class="uid-box" onclick="copyUID('7030651633')">
+🔥 Free Fire UID: 7030651633 
+</div>
+
+<a class="subscribe-btn" href="https://www.youtube.com/" target="_blank">
+SUBSCRIBE CHANNEL
+</a>
+</div>
+</header>
+
+<section id="about">
+<h2>About The Channel</h2>
+<p style="max-width:700px;margin:auto;">
+Welcome to DCX JAYESH 🎮 I upload Free Fire gameplay, epic diamond spins, legendary skins, and gaming highlights.
+Join the DCX Squad and level up your gaming experience!
+</p>
+</section>
+
+<section id="guild">
+<h2>🔥 My Free Fire Guild</h2>
+
+<div class="guild-banner">
+<img src="guild-bg.png">
+</div>
+
+<div class="guild-info">
+<p><strong>Guild Name:</strong> DCX ARMY</p>
+<p><strong>Guild UID:</strong> <span class="copy-uid" onclick="copyUID('3046060510')">3046060510</span></p>
+<p><strong>Guild Leader:</strong> <span class="leader">DCX JAYESH</span> UID: 7030651633</p>
+<p><strong>Act-Leader:</strong> <span class="co-leader">DCX MARCO</span> UID: 5400209996</p>
+<p><strong>Officers:</strong></p>
+<ul>
+<li><span class="officer">DCX LORD</span> UID: 2155962987</li>
+<li><span class="officer">DCX VISHAL</span> UID: 4994803886</li>
+</ul>
+</div>
+
+<!-- ✅ MEMBER LIST ADDED -->
+<div style="max-width:1000px;margin:30px auto;background:#0b0b0b;padding:25px;border-radius:20px;box-shadow:0 0 25px #ff000044;text-align:left;">
+<h3 style="color:#ff0000;text-align:center;margin-bottom:20px;">⚔ DCX ARMY MEMBERS</h3>
+<ul style="list-style:none;padding:0;font-size:18px;line-height:1.8;">
+<li>🔥 DCX XENO      - UID: 3990844069</li>
+<li>🔥 DCX SCORPIO   - UID: 1113811381</li>
+<li>🔥 DCX LOHAR 1M  - UID: 4892079487</li>
+<li>🔥 DCX AKSHATA   - UID: 6846492687</li>
+<li>🔥 DCX ABHIJIT   - UID: 6846492687</li>
+<li>🔥 DCX TEJAS     - UID: 11398738786</li>
+</ul>
+</div>
+
+<br><br>
+
+<a class="join-btn" href="https://ffshare.garena.com/?region=IND&lang=en&action=locate_clan&clan_id=3046060510&version=OB52" target="_blank">
+🔥 JOIN THE GUILD
+</a>
+
+</section>
+
+<!-- ✅ VIDEOS SECTION PRESENT -->
+<section id="videos">
+<h2>Latest Videos</h2>
+<div class="videos">
+
+<div class="video-card">
+<a href="https://www.youtube.com/watch?v=mA58mjIJLPM" target="_blank">
+<div class="thumbnail">
+<img src="https://img.youtube.com/vi/mA58mjIJLPM/hqdefault.jpg">
+<span class="play-btn">▶</span>
+</div>
+</a>
+</div>
+
+<div class="video-card">
+<a href="https://www.youtube.com/watch?v=QU6YrbVmiP8" target="_blank">
+<div class="thumbnail">
+<img src="https://img.youtube.com/vi/QU6YrbVmiP8/hqdefault.jpg">
+<span class="play-btn">▶</span>
+</div>
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- ✅ CONTACT PRESENT -->
+<section id="contact">
+<h2>Connect With Me</h2>
+<div class="contact-box">
+<p>📧 Email: <a href="mailto:jayeshbirth9128@gmail.com">jayeshbirth9128@gmail.com</a></p>
+<p>📱 WhatsApp: <a href="https://wa.me/918624869128" target="_blank">+91 8624869128</a></p>
+<p>📸 Instagram: <a href="https://instagram.com/jayeshrathod9128" target="_blank">@jayeshrathod9128</a></p>
+<p>📍 Maharashtra, India</p>
+</div>
+</section>
+
+<footer>
+© 2026 DCX JAYESH | Official Website 🔥
+</footer>
+
+<div class="toast" id="toast">Copied!</div>
+
+<script>
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+document.querySelectorAll(".uid-box,.copy-uid").forEach(el=>{
+let icon=document.createElement("span");
+icon.innerHTML=" 📋";
+icon.className="copy-icon";
+el.appendChild(icon);
+});
+});
+function copyUID(text){
+navigator.clipboard.writeText(text);
+let t=document.getElementById("toast");
+t.style.display="block";
+t.innerText="Copied: "+text;
+setTimeout(()=>t.style.display="none",1800);
+}
+</script>
+
+</body>
+</html>
