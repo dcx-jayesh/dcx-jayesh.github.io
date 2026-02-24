@@ -68,21 +68,54 @@ h2{font-size:2.6rem;margin-bottom:35px;color:#ff0000;text-shadow:0 0 15px #ff000
 .contact-box{background:#111;padding:25px;border-radius:15px;display:inline-block;box-shadow:0 0 20px #ff000033;}
 footer{background:#000;padding:20px;text-align:center;border-top:1px solid #ff0000;}
 
-#loader{position:fixed;width:100%;height:100vh;background:#000;display:flex;justify-content:center;align-items:center;z-index:9999;flex-direction:column;color:#ff0000;font-size:22px;}
-.loader-circle{width:70px;height:70px;border:4px solid #330000;border-top:4px solid #ff0000;border-radius:50%;animation:spin 1s linear infinite;box-shadow:0 0 30px #ff0000;margin-bottom:15px;}
-@keyframes spin{100%{transform:rotate(360deg);}}
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+flex-direction:column;
+color:#ff0000;
+font-size:22px;
+transition:opacity .5s ease, visibility .5s ease;
+}
 
-.copy-uid{cursor:pointer;color:#ffcc00;text-shadow:0 0 10px #ffcc00;}
-.copy-icon{margin-left:8px;font-size:18px;}
-.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#ff0000;padding:12px 20px;border-radius:30px;display:none;box-shadow:0 0 20px #ff0000;}
+.loader-circle{
+width:70px;
+height:70px;
+border:4px solid #330000;
+border-top:4px solid #ff0000;
+border-radius:50%;
+animation:spin 1s linear infinite;
+box-shadow:0 0 30px #ff0000;
+margin-bottom:15px;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+.hide-loader{
+opacity:0;
+visibility:hidden;
+}
 </style>
 </head>
 
 <body>
 
+<script>
+<!-- LOADER START -->
 <div id="loader">
-<div class="loader-circle"></div>
-Loading DCX JAYESH...
+    <div class="loader-circle"></div>
+    Loading DCX JAYESH...
+</div>
+<!-- LOADER END -->
+</script>
 </div>
 
 <nav>
@@ -115,6 +148,48 @@ SUBSCRIBE CHANNEL
 Welcome to DCX JAYESH 🎮 I upload Free Fire gameplay, epic diamond spins, legendary skins, and gaming highlights.
 Join the DCX Squad and level up your gaming experience!
 </p>
+
+</section>
+
+<section id="guild">
+<h2>🔥 My Free Fire Guild</h2>
+
+<div class="guild-banner">
+<img src="guild-bg.png">
+</div>
+
+<div class="guild-info">
+<p><strong>Guild Name:</strong> DCX ARMY</p>
+<p><strong>Guild UID:</strong> <span class="copy-uid" onclick="copyUID('3046060510')">3046060510</span></p>
+<p><strong>Guild Leader:</strong> <span class="leader">DCX JAYESH</span> UID: 7030651633</p>
+<p><strong>Act-Leader:</strong> <span class="co-leader">DCX MARCO</span> UID: 5400209996</p>
+<p><strong>Officers:</strong></p>
+<ul>
+<li><span class="officer">DCX LORD</span> UID: 2155962987</li>
+<li><span class="officer">DCX VISHAL</span> UID: 4994803886</li>
+</ul>
+</div>
+
+<!-- ✅ MEMBER LIST ADDED -->
+<div style="max-width:1000px;margin:30px auto;background:#0b0b0b;padding:25px;border-radius:20px;box-shadow:0 0 25px #ff000044;text-align:left;">
+<h3 style="color:#ff0000;text-align:center;margin-bottom:20px;">⚔ DCX ARMY MEMBERS</h3>
+<ul style="list-style:none;padding:0;font-size:18px;line-height:1.8;">
+<li>🔥 DCX XENO      - UID: 3990844069</li>
+<li>🔥 DCX SCORPIO   - UID: 1113811381</li>
+<li>🔥 DCX LOHAR 1M  - UID: 4892079487</li>
+<li>🔥 DCX AKSHATA   - UID: 6846492687</li>
+<li>🔥 DCX ABHIJIT   - UID: 6960399393</li>
+<li>🔥 DCX TEJAS     - UID: 11398738786</li>
+</ul>
+</div>
+
+<br><br>
+
+<a class="join-btn" href="https://ffshare.garena.com/?region=IND&lang=en&action=locate_clan&clan_id=3046060510&version=OB52" target="_blank">
+🔥 JOIN THE GUILD
+</a>
+
+</section>
 
 <section id="tips">
 
@@ -158,6 +233,47 @@ These sensitivity settings are tested for different smartphones to help players 
 <li>AWM Scope: 45</li>
 <li>Free Look: 55</li>
 </ul>
+
+<h3 style="color:#ff0000;">⚡ Best Sensitivity For High-End Devices (8GB+, 8+8GB RAM, Tablets & iPad)</h3>
+
+<p style="color:#ffcc00;">
+These sensitivity settings are optimized for powerful smartphones with virtual RAM and large-screen devices like tablets/iPads for smoother aim and better headshots.
+</p>
+
+<h4 style="color:#ff0000;">📱 High-End Phones (8GB+ RAM)</h4>
+<ul>
+<li>General: 85</li>
+<li>Red Dot: 80</li>
+<li>2X Scope: 75</li>
+<li>4X Scope: 65</li>
+<li>AWM Scope: 45</li>
+<li>Free Look: 55</li>
+</ul>
+
+<h4 style="color:#ff0000;">🚀 8GB + 8GB Virtual RAM Phones</h4>
+<ul>
+<li>General: 88</li>
+<li>Red Dot: 82</li>
+<li>2X Scope: 78</li>
+<li>4X Scope: 68</li>
+<li>AWM Scope: 48</li>
+<li>Free Look: 58</li>
+</ul>
+
+<h4 style="color:#ff0000;">📲 Tablets / iPad Players</h4>
+<ul>
+<li>General: 70</li>
+<li>Red Dot: 65</li>
+<li>2X Scope: 60</li>
+<li>4X Scope: 55</li>
+<li>AWM Scope: 35</li>
+<li>Free Look: 45</li>
+</ul>
+
+<p style="margin-top:15px;color:#ffcc00;">
+Larger screens need slightly lower sensitivity for stable aim.  
+High refresh rate phones may need slightly higher general sensitivity.
+</p>
 
 <h3 style="color:#ff0000;">🍎 Best Sensitivity For iPhone Users</h3>
 <ul>
@@ -225,46 +341,990 @@ These sensitivity settings are tested for different smartphones to help players 
 🔥 More pro tips coming soon on DCX JAYESH Official Website
 </p>
 
-</div>
+<section id="tips" style="padding:40px;background:#020617;color:white;line-height:1.8;">
+
+<h2 style="text-align:center;color:#00ffcc;">FREE FIRE PRO GUIDE – COMPLETE TIPS & TRICKS</h2>
+
+
+<h3 style="color:#00ff99;">1. Sensitivity Ka Sach (Most Important Topic)</h3>
+
+<p>
+Free Fire me sabse bada secret gun skin ya device nahi hota… sensitivity hoti hai.
+Agar sensitivity wrong hai to headshot impossible lagta hai.
+Har pro player apni sensitivity test karke banata hai, copy nahi karta blindly.
+</p>
+
+<p>
+General sensitivity high hone se drag smooth hota hai aur movement fast rehta hai.
+Lekin agar bahut high kar doge to screen shake karegi aur aim control nahi hoga.
+Red dot sensitivity slightly lower rakho taki spray stable rahe.
+Sniper scope sensitivity low rakho warna zoom me enemy miss hoga.
+</p>
+
+<p>
+Best method ye hai ki tum training ground me jaake ek wall choose karo.
+Waha khade hoke drag shot practice karo.
+Agar crosshair seedha head pe ja raha hai to sensitivity correct hai.
+Agar crosshair head ke upar ja raha hai to sensitivity high hai.
+Agar head tak pahuch hi nahi raha to sensitivity low hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">2. Device Ke Hisab Se Sensitivity</h3>
+
+<p>
+Sab phones same performance nahi dete.
+Isliye sab players ki sensitivity same nahi hoti.
+Low end device me screen response slow hota hai.
+High end device me drag bahut fast hota hai.
+</p>
+
+<p>
+2GB-3GB RAM players ko sensitivity medium rakhni chahiye.
+4GB-6GB RAM players slightly high rakh sakte hain.
+8GB+ RAM players ultra smooth gameplay le sakte hain.
+Tablet players ko sensitivity thodi low rakhni chahiye kyunki screen badi hoti hai.
+</p>
+
+<ul>
+<li>Low Device – Control pe focus karo</li>
+<li>Mid Device – Balance sensitivity</li>
+<li>High Device – Speed + accuracy</li>
+<li>Tablet – Stability sabse important</li>
+</ul>
+
+
+
+<h3 style="color:#00ff99;">3. HUD Setup Ka Power</h3>
+
+<p>
+Game sirf aim se nahi jeeta jata, HUD se jeeta jata hai.
+Agar tum jump ya gloo wall dhoond rahe ho fight me,
+to tum already late ho.
+</p>
+
+<p>
+Fire button thumb ke natural reach me hona chahiye.
+Jump aur crouch ek dusre ke paas hone chahiye.
+Weapon switch upar rakho taki accidental press na ho.
+Gloo wall fast access me hona chahiye.
+</p>
+
+<p>
+2 finger control beginner ke liye theek hai.
+3 finger control aggressive gameplay ke liye best hai.
+4 finger control pro level hai jaha movement aur aim ek sath hota hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">4. Aim Improve Karne Ka Real Method</h3>
+
+<p>
+Aim improve karne ka secret sensitivity nahi… practice hai.
+Roz 10 minute training ground me headshot practice karo.
+Close range drag shot practice karo.
+Long range tap fire practice karo.
+</p>
+
+<p>
+Crosshair always chest level pe rakho.
+Isse jab enemy dikhega to sirf thoda sa drag karna padega.
+Agar crosshair ground pe hai to headshot late hoga.
+</p>
+
+<p>
+Ek aur trick hai — enemy ko dekhte hi full spray mat karo.
+Short burst fire karo.
+Isse recoil kam hoga aur headshot chance badhega.
+</p>
+
+
+
+<h3 style="color:#00ff99;">5. Movement Se Fight Jeeto</h3>
+
+<p>
+Stationary player sabse easy target hota hai.
+Movement hi real defence hai.
+Fight me left-right strafe karo.
+Jump spam mat karo bina reason ke.
+Slide + fire combo use karo.
+</p>
+
+<p>
+Close range me zig-zag movement enemy ko confuse karta hai.
+Mid range me crouch + fire combo useful hai.
+Long range me cover fight best hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">6. Gloo Wall Mastery</h3>
+
+<p>
+Pro players gloo wall waste nahi karte.
+Wo usse strategy banate hain.
+Open area me gloo wall lagake right side se peek karo.
+Revive karte time double gloo lagao.
+Final zone me gloo wall hi life saver hota hai.
+</p>
+
+<p>
+Ek secret trick — gloo wall lagate hi crouch karo.
+Isse enemy ko headshot angle nahi milta.
+</p>
+
+
+
+<h3 style="color:#00ff99;">7. Sound Listening Skill</h3>
+
+<p>
+Headphones bina Free Fire incomplete hai.
+Footstep sound se enemy direction pata chalta hai.
+Gun sound se distance pata chalta hai.
+Jump sound se push timing pata chalta hai.
+</p>
+
+<p>
+Agar tum sound pe dhyan dena seekh gaye,
+to tum bina dekhe enemy ka location guess kar sakte ho.
+Ye pro level skill hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">8. Early Game Strategy</h3>
+
+<p>
+Match start hote hi sabse bada mistake hota hai hot drop karna bina plan ke.
+Early game me survival important hota hai.
+Helmet aur vest priority pe uthao.
+Shotgun early fight ke liye best hota hai.
+</p>
+
+<p>
+Loot fast karo, open me mat raho.
+Agar enemy zyada hai to fight avoid karo.
+Early death se rank push impossible ho jata hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">9. Mid Game Strategy</h3>
+
+<p>
+Mid game me unnecessary fight avoid karo.
+Zone edge pe play karo.
+Vehicle ka use karo fast rotation ke liye.
+Sniper ya AR ready rakho.
+</p>
+
+<p>
+Is stage pe survival + position dono important hote hain.
+Yaha se smart play start hota hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">10. Final Zone Secrets</h3>
+
+<p>
+Final zone me aim se zyada brain kaam karta hai.
+Gloo save rakho.
+High ground lo agar possible ho.
+Enemy ko pehle fight karne do.
+Third party karke easy kill lo.
+</p>
+
+<p>
+Final zone me panic nahi karna.
+Jo calm rehta hai wahi Booyah leta hai.
+</p>
+
 </section>
 
-<section id="guild">
-<h2>🔥 My Free Fire Guild</h2>
+<section style="padding:40px;background:#020617;color:white;line-height:1.8;">
 
-<div class="guild-banner">
-<img src="guild-bg.png">
+<h2 style="text-align:center;color:#00ffcc;">FREE FIRE PRO GUIDE – PART 2</h2>
+
+
+<h3 style="color:#00ff99;">11. Weapon Selection Ka Science</h3>
+
+<p>
+Har weapon ka role alag hota hai.
+Pro players random gun nahi uthate.
+Wo situation ke hisab se weapon choose karte hain.
+</p>
+
+<p>
+Close range ke liye SMG aur shotgun best hota hai.
+Mid range ke liye AR sabse stable hota hai.
+Long range ke liye sniper ya DMR useful hota hai.
+</p>
+
+<p>
+Best combo hota hai ek close range gun + ek mid/long range gun.
+Isse har situation handle ho jati hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">12. Drag Headshot Ka Real Secret</h3>
+
+<p>
+Log sochte hain drag karne se headshot hota hai.
+Lekin actual me headshot timing se hota hai.
+</p>
+
+<p>
+Jab tum fire karte ho tab recoil gun ko upar le jata hai.
+Agar tum ussi moment pe halka sa drag karte ho,
+to recoil + drag combine hoke crosshair head pe land karta hai.
+</p>
+
+<p>
+Isi liye pro players full drag nahi karte.
+Wo micro drag karte hain.
+Ye skill practice se aati hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">13. Rush Karne Ka Proper Tarika</h3>
+
+<p>
+Rush karna matlab blindly push karna nahi hota.
+Rush karna matlab enemy ko pressure me lana hota hai.
+</p>
+
+<p>
+Rush karte time sabse pehle cover identify karo.
+Fir gloo wall ready rakho.
+Fir ek side se peek karo.
+</p>
+
+<p>
+Agar enemy spray kar raha hai,
+to direct rush mat karo.
+Fake movement karo.
+Isse enemy reload karega aur tum push kar sakte ho.
+</p>
+
+
+
+<h3 style="color:#00ff99;">14. Solo vs Squad Winning Tricks</h3>
+
+<p>
+Solo vs squad me sabse bada rule hai
+kabhi bhi open me fight mat karo.
+</p>
+
+<p>
+Enemy ko ek-ek karke fight karo.
+First knock ke baad turant position change karo.
+Same spot pe ruke to team tumhe rush karegi.
+</p>
+
+<p>
+Gloo wall ka chain use karo.
+Kill ke baad reload zaroor karo.
+Aur sabse important — panic mat karo.
+</p>
+
+
+
+<h3 style="color:#00ff99;">15. Peek Shot Mastery</h3>
+
+<p>
+Peek shot ka matlab hota hai cover se thoda sa nikal ke fire karna.
+Ye skill pro level me bahut important hoti hai.
+</p>
+
+<p>
+Right side peek best hota hai.
+Left peek me body zyada expose hoti hai.
+</p>
+
+<p>
+Peek + fire + back cover.
+Ye pattern repeat karo.
+Enemy ko clean shot nahi milega.
+</p>
+
+
+
+<h3 style="color:#00ff99;">16. Third Party Strategy</h3>
+
+<p>
+Sabse easy kills milte hain third party se.
+Jab do teams fight kar rahi hoti hain,
+tab tum wait karo.
+</p>
+
+<p>
+Jaise hi knock sound aaye,
+turant push karo.
+Is time pe enemy weak hota hai.
+</p>
+
+<p>
+Ye trick rank push me sabse useful hoti hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;">17. Panic Control Training</h3>
+
+<p>
+Bahut players ka aim practice me achha hota hai,
+lekin real match me kharab ho jata hai.
+Reason hota hai panic.
+</p>
+
+<p>
+Panic hone pe finger tight ho jati hai,
+drag control kharab ho jata hai,
+aur decision slow ho jata hai.
+</p>
+
+<p>
+Solution hai calm gameplay.
+Fight start hote hi deep breath lo.
+Crosshair stable rakho.
+Aur pehla shot soch samajh ke lo.
+</p>
+
+
+
+<h3 style="color:#00ff99;">18. Map Knowledge Ka Advantage</h3>
+
+<p>
+Jo player map janta hai wo hamesha advantage me hota hai.
+High ground location yaad rakho.
+Best loot area yaad rakho.
+Safe rotation routes yaad rakho.
+</p>
+
+<p>
+Map knowledge se tum fight avoid bhi kar sakte ho
+aur smart push bhi kar sakte ho.
+</p>
+
+
+
+<h3 style="color:#00ff99;">19. Rank Push Mindset</h3>
+
+<p>
+Rank push me kills se zyada survival important hota hai.
+Har fight lena zaruri nahi hota.
+Smart players unnecessary fight avoid karte hain.
+</p>
+
+<p>
+Top 5 me pahuchna hi rank gain ka secret hai.
+Safe play + smart fight = fast rank push.
+</p>
+
+
+
+<h3 style="color:#00ff99;">20. Daily Practice Routine</h3>
+
+<p>
+10 min training ground headshot practice
+5 min movement practice
+5 min gloo wall practice
+</p>
+
+<p>
+Agar tum ye routine follow karte ho
+to ek week me gameplay improve ho jayega.
+Consistency hi pro banati hai.
+</p>
+
+</section>
+
+<section style="padding:50px 25px;background:#01030a;color:#e6faff;font-family:'Orbitron',sans-serif;line-height:1.9;">
+
+<h2 style="text-align:center;color:#00ffe1;font-size:2.4rem;text-shadow:0 0 12px #00ffe1;margin-bottom:35px;">
+FREE FIRE PRO GUIDE – PART 3
+</h2>
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">21. Pro Players Ki Secret Settings</h3>
+
+<p style="font-size:18px;">
+Pro players ka focus graphics pe nahi hota, performance pe hota hai.
+Smooth graphics + high FPS sabse best combination hota hai.
+Isse frame drop kam hota hai aur drag control smooth rehta hai.
+</p>
+
+<p style="font-size:18px;">
+Mini map size medium rakho.
+Fire button 60–70 best hota hai.
+Button placement thumb reach ke according hona chahiye.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">22. Reflex Speed Increase Trick</h3>
+
+<p style="font-size:18px;">
+Reflex fast karne ke liye sirf game nahi,
+reaction training bhi zaruri hoti hai.
+</p>
+
+<p style="font-size:18px;">
+Training ground me ek exercise karo:
+enemy ko aim karo,
+fire mat karo,
+sirf tracking practice karo.
+</p>
+
+<p style="font-size:18px;">
+Isse tumhara brain enemy movement predict karna seekhega.
+Ye pro level ka hidden training method hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">23. Clutch Fight Formula</h3>
+
+<p style="font-size:18px;">
+Clutch fight jeetne ka rule simple hai:
+position + patience + timing.
+</p>
+
+<p style="font-size:18px;">
+Sabse pehle cover pakdo.
+Enemy ko pehle move karne do.
+Jab wo reload kare tab push karo.
+</p>
+
+<p style="font-size:18px;">
+Clutch me jaldi fire karna galti hoti hai.
+First shot accurate hona chahiye.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">24. KD Ratio Increase Strategy</h3>
+
+<p style="font-size:18px;">
+KD increase karna hai to random drop mat karo.
+Hot drop sirf tab karo jab aim confident ho.
+</p>
+
+<p style="font-size:18px;">
+Mid zone drop best hota hai.
+Yahan loot milta hai aur early death ka risk kam hota hai.
+</p>
+
+<p style="font-size:18px;">
+Game ka goal hona chahiye:
+late game + smart fights.
+Isse KD automatically improve hota hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">25. Ultra Fast Aim Stabilizer Trick</h3>
+
+<p style="font-size:18px;">
+Agar tumhara aim shake karta hai,
+to screen pe thumb pressure kam rakho.
+</p>
+
+<p style="font-size:18px;">
+Zyada pressure se micro movement control kharab hota hai.
+Light touch + short drag = clean headshot.
+</p>
+
+<p style="font-size:18px;">
+Is trick se spray control instantly improve hota hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">26. Movement Mindgame Trick</h3>
+
+<p style="font-size:18px;">
+Movement sirf dodge karne ke liye nahi,
+enemy ko confuse karne ke liye hota hai.
+</p>
+
+<p style="font-size:18px;">
+Straight line me mat bhaago.
+Zig-zag run karo.
+Jump + crouch mix karo.
+</p>
+
+<p style="font-size:18px;">
+Jab enemy confuse hota hai,
+uska aim slow ho jata hai.
+Isi moment pe headshot milta hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">27. Close Range Fight Secret</h3>
+
+<p style="font-size:18px;">
+Close fight me ADS use mat karo.
+Hip fire fast hota hai.
+</p>
+
+<p style="font-size:18px;">
+Crosshair chest pe rakho,
+drag upward karo,
+automatic headshot chance badh jata hai.
+</p>
+
+<p style="font-size:18px;">
+Ye SMG fights me sabse powerful trick hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">28. Long Range Fight Control</h3>
+
+<p style="font-size:18px;">
+Long range me spray karna sabse badi galti hoti hai.
+Burst fire best hota hai.
+</p>
+
+<p style="font-size:18px;">
+3 bullets fire karo,
+0.5 sec rukho,
+fir fire karo.
+</p>
+
+<p style="font-size:18px;">
+Isse recoil reset hota hai
+aur accuracy double ho jati hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">29. Pro Awareness Trick</h3>
+
+<p style="font-size:18px;">
+Sound pe focus karo.
+Footstep direction pe dhyan do.
+Gun reload sound pe dhyan do.
+</p>
+
+<p style="font-size:18px;">
+Pro players screen se zyada sound se game samajhte hain.
+Headphone use karna mandatory hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">30. Champion Mindset Rule</h3>
+
+<p style="font-size:18px;">
+Pro player banne ka secret aim nahi,
+mindset hota hai.
+</p>
+
+<p style="font-size:18px;">
+Har match me improvement mindset rakho.
+Loss ko analyse karo.
+Win ko celebrate mat karo,
+usko repeat karo.
+</p>
+
+<p style="font-size:18px;">
+Consistency + practice + calm brain
+= real pro player.
+</p>
+
+</section>
+
+<section style="padding:60px 25px;background:#020611;color:#e6faff;font-family:'Orbitron',sans-serif;line-height:1.9;">
+
+<h2 style="text-align:center;color:#00ffe1;font-size:2.5rem;text-shadow:0 0 15px #00ffe1;margin-bottom:40px;">
+🔥 FREE FIRE PRO GUIDE – PART 4 🔥
+</h2>
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">31. One Tap Headshot Training Method</h3>
+
+<p style="font-size:18px;">
+One tap headshot luck se nahi aata, muscle memory se aata hai.
+Training ground me Desert Eagle uthao aur sirf single shot practice karo.
+</p>
+
+<p style="font-size:18px;">
+Rule simple hai:
+pehle aim set karo, phir fire karo.
+Jaldi fire karoge to body shot milega.
+</p>
+
+<p style="font-size:18px;">
+Roz 10 minute ye practice karoge to ek week me headshot accuracy noticeably improve hogi.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">32. Gloo Wall God Trick</h3>
+
+<p style="font-size:18px;">
+Pro players gloo wall defence ke liye nahi,
+fight control ke liye use karte hain.
+</p>
+
+<p style="font-size:18px;">
+Enemy fire kare,
+uske turant baad diagonal gloo lagao.
+Isse enemy ka aim block hota hai aur tum safe push kar sakte ho.
+</p>
+
+<p style="font-size:18px;">
+Straight gloo beginner habit hoti hai.
+Angle gloo pro habit hoti hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">33. Tournament Level Sensitivity Logic</h3>
+
+<p style="font-size:18px;">
+Tournament players extreme sensitivity nahi use karte.
+Wo balanced sensi use karte hain jisse control aur speed dono mile.
+</p>
+
+<p style="font-size:18px;">
+General high hota hai movement ke liye,
+scope sensi thoda low hota hai accuracy ke liye.
+</p>
+
+<p style="font-size:18px;">
+Agar tumhara aim shake karta hai,
+Red Dot sensi 2-3 point kam kar do.
+Instant stability feel hogi.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">34. Rush Timing Psychology</h3>
+
+<p style="font-size:18px;">
+Rush ka best time hota hai jab:
+enemy heal kar raha ho  
+enemy revive kar raha ho  
+enemy reload kar raha ho
+</p>
+
+<p style="font-size:18px;">
+Pro players bina reason rush nahi karte.
+Wo timing wait karte hain.
+</p>
+
+<p style="font-size:18px;">
+Right timing rush = free kill  
+Wrong timing rush = instant knock
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">35. 1v3 Fight Survival Rule</h3>
+
+<p style="font-size:18px;">
+1v3 fight me sabko ek saath engage mat karo.
+Isse tum turant eliminate ho jaoge.
+</p>
+
+<p style="font-size:18px;">
+Rule hai:
+enemy ko isolate karo,
+ek ko knock karo,
+position change karo,
+phir next fight lo.
+</p>
+
+<p style="font-size:18px;">
+Pro players multi-fight nahi lete,
+sequence fight lete hain.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">36. Ultra Fast Peek Trick</h3>
+
+<p style="font-size:18px;">
+Peek fight jeetne ka secret hai short exposure.
+Sirf half second ke liye peek karo.
+</p>
+
+<p style="font-size:18px;">
+Fire karo aur turant cover me aa jao.
+Zyada der khade rehna sabse badi mistake hoti hai.
+</p>
+
+<p style="font-size:18px;">
+Ye trick sniper aur AR dono fights me kaam karti hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">37. Aim Freeze Problem Solution</h3>
+
+<p style="font-size:18px;">
+Kabhi fight me thumb freeze ho jata hai.
+Ye panic reaction hota hai.
+</p>
+
+<p style="font-size:18px;">
+Iska solution hai pre-aim habit.
+Enemy aane se pehle crosshair ready rakho.
+</p>
+
+<p style="font-size:18px;">
+Isse brain panic nahi karta aur shot clean nikalta hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">38. Safe Zone Prediction Trick</h3>
+
+<p style="font-size:18px;">
+Late game jeetne ke liye zone samajhna zaruri hai.
+Next zone aksar previous zone ke opposite edge pe shift hota hai.
+</p>
+
+<p style="font-size:18px;">
+Center safe lagta hai,
+lekin edge control zyada powerful hota hai.
+</p>
+
+<p style="font-size:18px;">
+Edge pe rehkar tum rotation aur kills dono control kar sakte ho.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">39. Accuracy Boost Routine</h3>
+
+<p style="font-size:18px;">
+Match start karne se pehle 5 minute warmup karo:
+10 headshots Desert Eagle  
+10 SMG spray control  
+10 AR burst fire
+</p>
+
+<p style="font-size:18px;">
+Is routine se tumhara aim match start se hi stable rahega.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">40. Real Pro Rule</h3>
+
+<p style="font-size:18px;">
+Pro player wo nahi jo flashy play kare.
+Pro player wo hota hai jo consistent ho.
+</p>
+
+<p style="font-size:18px;">
+Daily thoda practice,
+har match me thoda analysis,
+har fight me calm decision.
+</p>
+
+<p style="font-size:18px;">
+Isi process se real skill build hoti hai.
+</p>
+<section style="padding:60px 25px;background:#010814;color:#e6faff;font-family:'Orbitron',sans-serif;line-height:1.9;">
+
+<h2 style="text-align:center;color:#00ffe1;font-size:2.5rem;text-shadow:0 0 15px #00ffe1;margin-bottom:40px;">
+🔥 FREE FIRE PRO GUIDE – PART 5 🔥
+</h2>
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">41. Crosshair Placement Secret</h3>
+
+<p style="font-size:18px;">
+Beginner player ground pe aim rakhte hain.
+Pro player head level pe crosshair rakhte hain.
+</p>
+
+<p style="font-size:18px;">
+Iska benefit ye hota hai ki enemy dikte hi drag distance kam hota hai.
+Matlab faster headshot.
+</p>
+
+<p style="font-size:18px;">
+Har time aim ko chest ya head height pe rakhne ki habit banao.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">42. Silent Push Trick</h3>
+
+<p style="font-size:18px;">
+Enemy pe seedha run karke push karna sabse badi mistake hai.
+Isse footsteps se tumhari location reveal ho jati hai.
+</p>
+
+<p style="font-size:18px;">
+Pro trick hai crouch + short movement push.
+Isse sound kam hota hai aur surprise milta hai.
+</p>
+
+<p style="font-size:18px;">
+Silent push ka use close fights me karo.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">43. Fake Retreat Mind Game</h3>
+
+<p style="font-size:18px;">
+Kabhi kabhi fight me peeche hatna bhi strategy hoti hai.
+</p>
+
+<p style="font-size:18px;">
+Enemy ko lagta hai tum weak ho,
+wo aggressively push karta hai.
+</p>
+
+<p style="font-size:18px;">
+Isi moment pe tum cover se peek karke easy knock le sakte ho.
+Isko fake retreat mind game kehte hain.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">44. Movement Speed Advantage</h3>
+
+<p style="font-size:18px;">
+Jump + slide movement se enemy ka aim disturb hota hai.
+Straight run karna sabse predictable movement hai.
+</p>
+
+<p style="font-size:18px;">
+Zig-zag movement use karo.
+Isse tum hit hone se bachoge aur fight me extra time milega.
+</p>
+
+<p style="font-size:18px;">
+Movement hi survival ka real secret hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">45. High Ground Control Rule</h3>
+
+<p style="font-size:18px;">
+Jo player high ground pe hota hai,
+usko natural advantage milta hai.
+</p>
+
+<p style="font-size:18px;">
+Wo enemy ko easily spot kar sakta hai,
+aur recoil control bhi better hota hai.
+</p>
+
+<p style="font-size:18px;">
+Isliye fights me hamesha try karo ki tum higher position pe raho.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">46. Smart Reload Timing</h3>
+
+<p style="font-size:18px;">
+Fight ke beech reload karna dangerous hota hai.
+Pro players reload sirf cover ke andar karte hain.
+</p>
+
+<p style="font-size:18px;">
+Agar reload karte waqt enemy aa gaya,
+to tum bilkul helpless ho jaoge.
+</p>
+
+<p style="font-size:18px;">
+Reload = always behind cover rule follow karo.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">47. Panic Spray Control</h3>
+
+<p style="font-size:18px;">
+Close fight me panic spray karne se bullets miss hoti hain.
+</p>
+
+<p style="font-size:18px;">
+Pro players spray ko micro drag se control karte hain.
+Small upward drag recoil ko balance karta hai.
+</p>
+
+<p style="font-size:18px;">
+Isko practice karne ke liye training ground me SMG use karo.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">48. Sound Awareness Trick</h3>
+
+<p style="font-size:18px;">
+Headphones use karna ek huge advantage hai.
+Footsteps se enemy distance aur direction dono pata chal jata hai.
+</p>
+
+<p style="font-size:18px;">
+Sound pe react karna seekh jao,
+to half fights bina dekhe jeet sakte ho.
+</p>
+
+<p style="font-size:18px;">
+Sound awareness pro level skill hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">49. Final Zone Calm Strategy</h3>
+
+<p style="font-size:18px;">
+Last zone me panic karne se match lose hota hai.
+</p>
+
+<p style="font-size:18px;">
+Pro players slow play karte hain,
+position hold karte hain,
+aur last moment me attack karte hain.
+</p>
+
+<p style="font-size:18px;">
+Late game me patience hi biggest weapon hota hai.
+</p>
+
+
+
+<h3 style="color:#00ff99;font-size:1.6rem;margin-top:30px;">50. Ultimate Pro Mindset</h3>
+
+<p style="font-size:18px;">
+Skill sirf settings se nahi aati.
+Mindset se aati hai.
+</p>
+
+<p style="font-size:18px;">
+Har match se seekho,
+har mistake ko analyse karo,
+aur improve karte raho.
+</p>
+
+<p style="font-size:18px;">
+Consistency hi real pro banati hai.
+</p>
+
+</section>
+
 </div>
-
-<div class="guild-info">
-<p><strong>Guild Name:</strong> DCX ARMY</p>
-<p><strong>Guild UID:</strong> <span class="copy-uid" onclick="copyUID('3046060510')">3046060510</span></p>
-<p><strong>Guild Leader:</strong> <span class="leader">DCX JAYESH</span> UID: 7030651633</p>
-<p><strong>Act-Leader:</strong> <span class="co-leader">DCX MARCO</span> UID: 5400209996</p>
-<p><strong>Officers:</strong></p>
-<ul>
-<li><span class="officer">DCX LORD</span> UID: 2155962987</li>
-<li><span class="officer">DCX VISHAL</span> UID: 4994803886</li>
-</ul>
-</div>
-
-<!-- ✅ MEMBER LIST ADDED -->
-<div style="max-width:1000px;margin:30px auto;background:#0b0b0b;padding:25px;border-radius:20px;box-shadow:0 0 25px #ff000044;text-align:left;">
-<h3 style="color:#ff0000;text-align:center;margin-bottom:20px;">⚔ DCX ARMY MEMBERS</h3>
-<ul style="list-style:none;padding:0;font-size:18px;line-height:1.8;">
-<li>🔥 DCX XENO      - UID: 3990844069</li>
-<li>🔥 DCX SCORPIO   - UID: 1113811381</li>
-<li>🔥 DCX LOHAR 1M  - UID: 4892079487</li>
-<li>🔥 DCX AKSHATA   - UID: 6846492687</li>
-<li>🔥 DCX ABHIJIT   - UID: 6960399393</li>
-<li>🔥 DCX TEJAS     - UID: 11398738786</li>
-</ul>
-</div>
-
-<br><br>
-
-<a class="join-btn" href="https://ffshare.garena.com/?region=IND&lang=en&action=locate_clan&clan_id=3046060510&version=OB52" target="_blank">
-🔥 JOIN THE GUILD
-</a>
+</section>
 
 </section>
 
@@ -310,59 +1370,11 @@ These sensitivity settings are tested for different smartphones to help players 
 </footer>
 
 <div class="toast" id="toast">Copied!</div>
-
 <script>
-const searchInput = document.getElementById("tipSearch");
-const tipsBox = document.getElementById("tipsContent");
-
-searchInput.addEventListener("keyup", function() {
-
-let filter = this.value.toLowerCase();
-let textElements = tipsBox.querySelectorAll("p, li, td, h3");
-
-let found = false;
-
-textElements.forEach(el => {
-
-let original = el.textContent;
-let lower = original.toLowerCase();
-
-if(filter !== "" && lower.includes(filter)){
-found = true;
-
-// highlight word
-let regex = new RegExp(`(${filter})`, "gi");
-el.innerHTML = original.replace(regex, `<span style="background:#00ff99;color:#000;padding:2px 4px;border-radius:4px;">$1</span>`);
-
-// show element
-el.style.display="";
-
-}else{
-
-// remove highlight safely
-el.innerHTML = original;
-
-// hide non matching if search active
-if(filter !== ""){
-el.style.display="none";
-}else{
-el.style.display="";
-}
-
-}
-
-});
-
-// glow effect
-if(filter === ""){
-searchInput.style.boxShadow="0 0 10px #00ff99";
-}
-else if(found){
-searchInput.style.boxShadow="0 0 20px #00ff99";
-}else{
-searchInput.style.boxShadow="0 0 20px red";
-}
-
+window.addEventListener("load", function(){
+    const loader = document.getElementById("loader");
+    loader.classList.add("hide-loader");
+    setTimeout(()=>{ loader.style.display="none"; },500);
 });
 </script>
 
