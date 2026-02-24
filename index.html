@@ -8,6 +8,10 @@
 
 <title>DCX JAYESH | Official Free Fire Gaming Website</title>
 
+<meta property="og:image" content="https://dcx-jayesh.github.io/logo.png">
+<meta name="twitter:image" content="https://dcx-jayesh.github.io/logo.png">
+<link rel="icon" href="https://dcx-jayesh.github.io/logo.png">
+
 <meta name="description" content="DCX JAYESH Official Free Fire Gaming Website. Watch gameplay videos, guild info, UID, diamond spins, and join DCX Army.">
 <meta name="keywords" content="DCX Jayesh, Free Fire India, Free Fire UID, Free Fire Guild, DCX Army, Gaming Website, Free Fire Player India">
 <meta name="author" content="DCX JAYESH">
@@ -17,15 +21,11 @@
 <meta property="og:description" content="Official website of DCX JAYESH. Free Fire gameplay, guild info, UID and gaming highlights.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dcx-jayesh.github.io"> 
-<meta property="og:image" content="profile.jpeg">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DCX JAYESH Gaming Website">
 <meta name="twitter:description" content="Free Fire gameplay, guild info, UID, spins and highlights.">
-<meta name="twitter:image" content="profile.jpeg">
-
 <link rel="canonical" href="https://dcx-jayesh.github.io"> 
-<link rel="icon" href="profile.jpeg">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
@@ -86,6 +86,7 @@ Loading DCX JAYESH...
 </div>
 
 <nav>
+<img src="logo.png" style="height:40px;vertical-align:middle;margin-right:15px;">
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#guild">Guild</a>
@@ -116,9 +117,10 @@ Join the DCX Squad and level up your gaming experience!
 </p>
 
 <section id="tips">
+
 <h2>🔥 DCX JAYESH Pro Free Fire Tips & Sensitivity</h2>
 
-<div style="max-width:1000px;margin:auto;background:#111;padding:30px;border-radius:20px;text-align:left;box-shadow:0 0 30px #ff000044;font-size:18px;line-height:1.8;">
+<div id="tipsContent" style="max-width:1000px;margin:auto;background:#111;padding:30px;border-radius:20px;text-align:left;box-shadow:0 0 30px #ff000044;font-size:18px;line-height:1.8;">
 
 <input type="text" id="tipSearch" placeholder="Search Free Fire tips..."
 style="width:100%;padding:12px;margin:20px 0;border-radius:10px;border:none;background:#0b0b0b;color:white;font-size:16px;">
@@ -226,8 +228,6 @@ These sensitivity settings are tested for different smartphones to help players 
 </div>
 </section>
 
-</section>
-
 <section id="guild">
 <h2>🔥 My Free Fire Guild</h2>
 
@@ -312,22 +312,58 @@ These sensitivity settings are tested for different smartphones to help players 
 <div class="toast" id="toast">Copied!</div>
 
 <script>
-window.addEventListener("load",()=>{
-document.getElementById("loader").style.display="none";
-document.querySelectorAll(".uid-box,.copy-uid").forEach(el=>{
-let icon=document.createElement("span");
-icon.innerHTML=" 📋";
-icon.className="copy-icon";
-el.appendChild(icon);
-});
-});
-function copyUID(text){
-navigator.clipboard.writeText(text);
-let t=document.getElementById("toast");
-t.style.display="block";
-t.innerText="Copied: "+text;
-setTimeout(()=>t.style.display="none",1800);
+const searchInput = document.getElementById("tipSearch");
+const tipsBox = document.getElementById("tipsContent");
+
+searchInput.addEventListener("keyup", function() {
+
+let filter = this.value.toLowerCase();
+let textElements = tipsBox.querySelectorAll("p, li, td, h3");
+
+let found = false;
+
+textElements.forEach(el => {
+
+let original = el.textContent;
+let lower = original.toLowerCase();
+
+if(filter !== "" && lower.includes(filter)){
+found = true;
+
+// highlight word
+let regex = new RegExp(`(${filter})`, "gi");
+el.innerHTML = original.replace(regex, `<span style="background:#00ff99;color:#000;padding:2px 4px;border-radius:4px;">$1</span>`);
+
+// show element
+el.style.display="";
+
+}else{
+
+// remove highlight safely
+el.innerHTML = original;
+
+// hide non matching if search active
+if(filter !== ""){
+el.style.display="none";
+}else{
+el.style.display="";
 }
+
+}
+
+});
+
+// glow effect
+if(filter === ""){
+searchInput.style.boxShadow="0 0 10px #00ff99";
+}
+else if(found){
+searchInput.style.boxShadow="0 0 20px #00ff99";
+}else{
+searchInput.style.boxShadow="0 0 20px red";
+}
+
+});
 </script>
 
 </body>
